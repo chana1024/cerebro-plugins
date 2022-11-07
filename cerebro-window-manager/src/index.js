@@ -64,7 +64,8 @@ function getIcon(winTitle,appName) {
     if(winapp.length > 0) {
         return winapp[0].icon
     }else{
-        winapp = appsList.filter(app => app.name.toLowerCase() === winTitle.toLowerCase())
+        console.log(winTitle)
+        winapp = appsList.filter(app => app.name.toLowerCase() === winTitle.split('-')[winTitle.split('-').length-1].trim().toLowerCase())
         return winapp.length > 0 ? winapp[0].icon : DEFAULT_ICON;
     }
 }
