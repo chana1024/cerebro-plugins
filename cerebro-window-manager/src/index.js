@@ -32,8 +32,17 @@ function getFilteredWindowsRegex() {
   words = [
     'cerebro',
     'budgie-panel',
-    '@!0,0;BDHF'
+    '@!0,0;BDHF',
+    '@!2560,1440;BDHF',
+    '@!5120,1440;BDHF',
+    '@!2560,0;BDHF',
+    '@!0,1440;BDHF'
   ]
+
+
+
+
+
   return new RegExp(`[^\/]*${words.map(item => `(${item})`).join('|')}[^\/]*$`, 'i');
 }
 
