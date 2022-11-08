@@ -2,7 +2,7 @@
 
 const { shellCommand, memoize } = require('cerebro-tools');
 const pluginIcon = require('./icon.png');
-const REGEXP = /kill\s(.*)/;
+const REGEXP = /cron\s(.*)/;
 const LIST_CMD = 'ps -A -o pid -o %cpu -o comm | sed 1d';
 
 const DEFAULT_ICON = '/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/ExecutableBinaryIcon.icns';
@@ -54,12 +54,16 @@ const findProcess = memoize((searchProcessName) => {
  * @param  {Function} options.display
  */
 const fn = ({term, display}) => {
-    const results={
-        order:11,
-        title: `cron expression`,
-        getPreview: () => "<embed style='width:900px;height: 728px' type='text/html'  src='http://cron.ciding.cc/'>"
+  const match = term.match(REGEXP);
+    if (match) {
+        const results={
+            order:11,
+            icon: pluginIcon,
+            title: `cron expression`,
+            getPreview: () => "<embed style='width:900px;height: 728px' type='text/html'  src='http://cron.ciding.cc/'>"
+        }
+        display(results);
     }
-    display(results);
 };
 
 module.exports = {
