@@ -12,7 +12,6 @@ let appDirs = [
   path.join('/usr', 'local','share'),
   path.join('/usr', 'share', 'ubuntu'),
   path.join('/usr', 'share', 'gnome'),
-  path.join('/usr', 'local', 'share'),
   path.join('/var', 'lib', 'snapd', 'desktop')
 ]
 
