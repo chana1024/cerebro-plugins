@@ -29,9 +29,10 @@ export const fn = ({ term, actions, display }) => {
            */
           // eslint-disable-next-line no-var
           var search = (searchTerm) => {
-            searchTerm = "google definition "+searchTerm
+            // searchTerm = "google definition "+searchTerm
             const q = encodeURIComponent(searchTerm)
-            const url = `https://www.google.com/search?q=${q}&cad=h`
+            // const url = `https://www.google.com/search?q=${q}&cad=h`
+            const url = `https://dictionary.cambridge.org/dictionary/english-chinese-traditional/${q}`
             childProcess.exec(`firefox ${url}`)
           }
 
@@ -42,7 +43,8 @@ export const fn = ({ term, actions, display }) => {
             title: `Search google definition  for ${query}`,
             onSelect: () => search(query),
             // getPreview: () => <Preview query={query} key={query} search={search} />
-              getPreview: () => `<div>${query}</div>`
+              getPreview: () => `<div style="color: #2e69d7; font-size: xx-large; font-family: cursive;">${query}</div>`
           })
     }
 }
+
