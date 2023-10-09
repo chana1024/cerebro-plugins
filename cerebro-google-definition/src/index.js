@@ -32,8 +32,10 @@ export const fn = ({ term, actions, display }) => {
             // searchTerm = "google definition "+searchTerm
             const q = encodeURIComponent(searchTerm)
             // const url = `https://www.google.com/search?q=${q}&cad=h`
-            const url = `https://dictionary.cambridge.org/dictionary/english-chinese-traditional/${q}`
-            childProcess.exec(`firefox ${url}`)
+            // const url = `https://dictionary.cambridge.org/dictionary/english-chinese-traditional/${q}`
+            // const url = `https://dictionary.cambridge.org/dictionary/english/${q}`
+            const url = "https://www.youdao.com/result\?word\="+q+"\&lang\=en"
+            childProcess.exec('firefox "'+url+'"')
           }
 
           display({
