@@ -34,7 +34,8 @@ export const fn = ({ term, actions, display }) => {
             // const url = `https://www.google.com/search?q=${q}&cad=h`
             // const url = `https://dictionary.cambridge.org/dictionary/english-chinese-traditional/${q}`
             // const url = `https://dictionary.cambridge.org/dictionary/english/${q}`
-            const url = "https://www.youdao.com/result\?word\="+q+"\&lang\=en"
+            // const url = "https://www.youdao.com/result\?word\="+q+"\&lang\=en"
+            const url='https://www.ldoceonline.com/dictionary/'+q
             childProcess.exec('firefox "'+url+'"')
           }
 
