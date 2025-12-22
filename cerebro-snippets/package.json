@@ -11,8 +11,11 @@
   "dependencies": {
     "@cerebroapp/cerebro-ui": "^1.0.4",
     "cerebro-tools": "^0.1.8",
-    "react": "^18.2.0",
     "react-highlight": "^0.14.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "@cerebroapp/cerebro-scripts": "^1.0.0-alpha.6",
