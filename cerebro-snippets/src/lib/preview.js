@@ -9,8 +9,10 @@ const codeStyle = { margin: 0, padding: '10px' };
 // Inline styles (CSS import doesn't work in Cerebro environment)
 const styles = {
     container: {
-        maxHeight: '800px',
         outline: 'none',
+        position: 'absolute', 
+        top: '10px',
+        paddingBottom: '10px',
     },
     hint: {
         padding: '8px 12px',
@@ -85,7 +87,9 @@ const styles = {
     },
     single: {
         outline: 'none',
-        position: 'relative',
+        position: 'absoulte',
+        top: '10px',
+        paddingBottom: '10px',
     },
     singleCopyButton: {
         position: 'absolute',
